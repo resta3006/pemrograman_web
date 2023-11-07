@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(228, 164, 209);
+    color: rgb(41, 38, 38);
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+    background-color: #333;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 10px;
+}
+
+nav a {
+    
+    text-decoration: none;
+    color: rgb(224, 163, 163);
+}
+
+section {
+    background-color: rgb(228, 164, 209);
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ce9a9a;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: #3498db;
+}
