@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Luas Trapesium</title>
+	<script>
+		function hitungLuas() {
+			var garisAtas = parseFloat(document.getElementById("garisAtas").value);
+			var garisBawah = parseFloat(document.getElementById("garisBawah").value);
+			var tinggi = parseFloat(document.getElementById("tinggi").value);
+			var luas = ((garisAtas + garisBawah) * tinggi) / 2;
+			document.getElementById("hasil").innerHTML = "Maka : Luas = " + luas.toFixed(2) + " cm<sup>2</sup>";
+		}
+	</script>
+</head>
+<body>
+	<h1>Menghitung Luas Trapesium</h1>
+	<p>Diketahui :</p>
+	<ul>
+		<li>Garis Atas : <input type="number" id="garisAtas"></li>
+		<li>Garis Bawah : <input type="number" id="garisBawah"></li>
+		<li>Tinggi : <input type="number" id="tinggi"></li>
+	</ul>
+	<button onclick="hitungLuas()">Hitung</button>
+	<p id="hasil"></p>
+</body>
+</html>

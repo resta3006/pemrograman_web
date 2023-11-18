@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contoh Dialog Box</title>
+	<script>
+		function tampilkanAlert() {
+			alert("Ini adalah pesan pada alert box");
+		}
+
+		function tampilkanConfirm() {
+			var konfirmasi = confirm("Apakah Anda yakin ingin melanjutkan?");
+			if (konfirmasi == true) {
+				alert("Anda memilih OK");
+			} else {
+				alert("Anda memilih Cancel");
+			}
+		}
+
+		function tampilkanPrompt() {
+			var nama = prompt("Masukkan nama Anda:");
+			if (nama != null) {
+				alert("Halo, " + nama + "!");
+			}
+		}
+	</script>
+</head>
+<body>
+	<button onclick="tampilkanAlert()">Tampilkan Alert Box</button>
+	<button onclick="tampilkanConfirm()">Tampilkan Confirm Box</button>
+	<button onclick="tampilkanPrompt()">Tampilkan Prompt Box</button>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh Program JavaScript dengan Alert, Prompt, Confirm, dan Form</title>
+  <script>
+    function showAlert() {
+      alert("Ini adalah contoh pesan menggunakan Alert!");
+    }
+    
+    function showPrompt() {
+      var name = prompt("Silakan masukkan nama Anda:");
+      if (name != null && name != "") {
+        alert("Halo " + name + "! Selamat datang.");
+      } else {
+        alert("Anda belum memasukkan nama.");
+      }
+    }
+    
+    function showConfirm() {
+      var result = confirm("Apakah Anda yakin ingin melanjutkan?");
+      if (result) {
+        alert("Anda memilih untuk melanjutkan.");
+      } else {
+        alert("Anda memilih untuk membatalkan.");
+      }
+    }
+    
+    function submitForm() {
+      var formElement = document.getElementById("myForm");
+      var name = formElement.elements["name"].value;
+      var email = formElement.elements["email"].value;
+      
+      if (name != "" && email != "") {
+        alert("Terima kasih atas pengisian form.");
+      } else {
+        alert("Harap lengkapi semua field pada form.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Contoh Program JavaScript dengan Alert, Prompt, Confirm, dan Form</h1>
+  
+  <button onclick="showAlert()">Tampilkan Alert</button>
+  <button onclick="showPrompt()">Tampilkan Prompt</button>
+  <button onclick="showConfirm()">Tampilkan Confirm</button>
+  
+  <br><br>
+  
+  <form id="myForm">
+    <label for="name">Nama:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <br><br>
+    
+    <button type="button" onclick="submitForm()">Submit</button>
+  </form>
+</body>
+</html>
