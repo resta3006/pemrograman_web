@@ -2,22 +2,34 @@
 <html>
 <head>
     <title>Kalkulator Sederhana</title>
+    <style>
+        h1 { 
+          color:rgb(153, 74, 91);
+          text-align:center;
+          font-family: 'Times New Roman', Times, serif;
+        }
+        
+        body {
+          background-color:rgb(228, 171, 185);
+        }
+      </style>
 </head>
 <body>
     <h1>Kalkulator Sederhana</h1>
-    <p>Masukkan Nilai I:</p>
+    <p>Masukkan Nilai I:
     <input type="number" id="nilai1" name="nilai1">
-    <p>Masukkan Nilai II:</p><select id="operasi" name="operasi">
+    <select id="operasi" name="operasi">
         <option value="+">+</option>
         <option value="-">-</option>
         <option value="*">*</option>
         <option value="/">/</option>
-    <input type="number" id="nilai2" name="nilai2">
     </select>
+    Masukkan Nilai II:
+    <input type="number" id="nilai2" name="nilai2">
+    <button onclick="hitung()">Submit</button></p>
+
     <p>Hasil:</p>
     <input type="number" id="hasil" name="hasil" readonly>
-    <button onclick="hitung()">Submit</button>
-
     <script>
         function hitung() {
             var nilai1 = parseFloat(document.getElementById("nilai1").value);
