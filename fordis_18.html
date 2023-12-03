@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+        h1 { 
+          color:rgb(179, 101, 118);
+          text-align:center;
+          font-family: 'Times New Roman', Times, serif;
+        }
+        
+        body {
+          background-color:rgb(241, 194, 206);
+        }
+      </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Pilihan</title>
+    <script>
+      function showContent() {
+        var choice = document.getElementById("menu").value;
+
+        if (choice === "1") {
+          calculateCalculator();
+        } else if (choice === "2") {
+          calculateTrapesium();
+        } else if (choice === "3") {
+          calculateSeries();
+        } else {
+          alert("Pilihan tidak valid");
+        }
+      }
+
+      function calculateCalculator() {
+        var number1 = parseFloat(prompt("Masukkan angka pertama:"));
+        var number2 = parseFloat(prompt("Masukkan angka kedua:"));
+
+        var result = number1 + number2;
+        alert("Hasil penjumlahan: " + result);
+      }
+
+      function calculateTrapesium() {
+        var base1 = parseFloat(
+          prompt("Masukkan panjang alas bawah trapesium:")
+        );
+        var base2 = parseFloat(prompt("Masukkan panjang alas atas trapesium:"));
+        var height = parseFloat(prompt("Masukkan tinggi trapesium:"));
+
+        var area = 0.5 * (base1 + base2) * height;
+        alert("Luas trapesium: " + area);
+      }
+
+      function calculateSeries() {
+        var n = parseInt(prompt("Masukkan jumlah bilangan dalam deret:"));
+        var seriesResult = 0;
+
+        for (var i = 1; i <= n; i++) {
+          seriesResult += i;
+        }
+
+        alert("Hasil penjumlahan deret bilangan: " + seriesResult);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Menu Pilihan</h1>
+    <label for="menu">Pilih menu:</label>
+    <select id="menu">
+      <option value="1">Menghitung Kalkulator</option>
+      <option value="2">Menghitung Luas Trapesium</option>
+      <option value="3">Menghitung Deret Bilangan</option>
+    </select>
+    <button onclick="showContent()">Tampilkan</button>
+  </body>
+</html>
